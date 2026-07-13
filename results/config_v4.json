@@ -1,0 +1,42 @@
+{
+  "n_origins": 5,
+  "test_frac": 0.08,
+  "cal_frac": 0.1,
+  "scheme": "expanding",
+  "tau_reject": 0.5,
+  "tau_accept": 0.9,
+  "epsilon_harm": 0.0,
+  "noninf_margin": 0.05,
+  "students": [
+    "DLinear",
+    "PatchTST",
+    "N-HiTS"
+  ],
+  "teachers": [
+    "QELM",
+    "QELM-NISQ",
+    "ClassicalELM"
+  ],
+  "policies": [
+    "NaiveKD",
+    "SoftSR",
+    "HardRejectSR",
+    "LegacyPersist"
+  ],
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "prereg": {
+    "H1_harm_control": "SoftSR regret vs NS is stochastically smaller than LegacyPersist regret and NaiveKD regret; unit = dataset x origin (seeds kept as a level); one-sided Wilcoxon over origin blocks, Holm within family",
+    "H2_incremental": "SoftSR is non-inferior to HardRejectSR on mean relative regret (margin 5%) and improves benefit retention on gate-accepted cells",
+    "H3_noninferiority": "on gate-accepted cells (r_stu >= tau_accept), SoftSR relative regret vs best(NS, NaiveKD) has bootstrap upper 95% CI below the 5% margin",
+    "H4_generality": "H1 direction holds for every primary student; per-student effects reported with CIs",
+    "sensitivity": "per-origin Diebold-Mariano (HAC lag = h-1) and moving-block bootstrap (block = WINDOW + h)",
+    "unit": "dataset x origin (x seed as level); overlapping windows are repeated measures, never the inference unit",
+    "divergence": "run diverged if test MASE > 3 x persistence MASE on the same origin"
+  },
+  "run_mode": "full",
+  "frozen_utc": "2026-07-13T05:42:41Z"
+}

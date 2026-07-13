@@ -1,0 +1,32 @@
+{
+  "ETTh1": {
+    "source": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTh1.csv",
+    "sha256": "f18de3ad269cef59bb07b5438d79bb3042d3be49bdeecf01c1cd6d29695ee066",
+    "n_points": 17420
+  },
+  "ETTm2": {
+    "source": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTm2.csv",
+    "sha256": "db973ca252c6410a30d0469b13d696cf919648d0f3fd588c60f03fdbdbadd1fd",
+    "n_points": 69680
+  },
+  "Energy": {
+    "source": "https://raw.githubusercontent.com/panambY/Hourly_Energy_Consumption/master/data/PJME_hourly.csv",
+    "sha256": "4eb2b16d42bf07ec41ab55cb842191594cb69452725a6d3c0991658a628fde84",
+    "n_points": 145366
+  },
+  "ExchangeRate": {
+    "source": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/exchange_rate/exchange_rate.txt.gz",
+    "sha256": "6a4fbb561dcdee43f071a83badbeec9223a335552278348656738b556f1c2e9d",
+    "n_points": 7588
+  },
+  "Jena": {
+    "source": "https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip",
+    "sha256": "63d757501e92284a7de7cdbef0337f03b24e13ead7ac2b5b8c86a18d8e38ba5b",
+    "n_points": 420551
+  },
+  "AAPL": {
+    "source": "https://raw.githubusercontent.com/matplotlib/sample_data/master/aapl.csv",
+    "sha256": "3ed6cf3e0cbb0920f81025d12f74c13f164cd3680dcfc716b49a3a800f263303",
+    "n_points": 6080
+  }
+}

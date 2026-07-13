@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the associated article and this archive."
+title: "Student-Relative Reliability Gating for Risk-Controlled Knowledge Distillation in Engineering Time-Series Forecasting: benchmark artifact"
+type: software
+authors:
+  - family-names: "Nkishi Djenga"
+    given-names: "Gedeon"
+    affiliation: "University of Kinshasa (UNIKIN), DRC"
+  - family-names: "Kambale"
+    given-names: "Witesyavwirwa Vianney"
+    affiliation: "Tshwane University of Technology (TUT), South Africa"
+  - family-names: "Kambale"
+    given-names: "Exauce Maruba"
+    affiliation: "University of Kinshasa (UNIKIN), DRC"
+  - family-names: "Kyamakya"
+    given-names: "Kyandoghere"
+    affiliation: "University of Klagenfurt, Austria"
+version: "v4.0"
+date-released: "2026-07-13"
+license: MIT
+# doi: 10.5281/zenodo.XXXXXXX   <- uncomment and fill after reserving the Zenodo DOI
+repository-code: "https://github.com/ORG/sr-gate-distillation"  # <- update after creating the repo
+keywords:
+  - knowledge distillation
+  - negative transfer
+  - time-series forecasting
+  - reliability gating
+  - quantum machine learning

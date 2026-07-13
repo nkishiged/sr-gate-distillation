@@ -1,0 +1,80 @@
+[
+  {
+    "claim": "H1",
+    "statement": "SoftSR regret < NaiveKD and < LegacyPersist over dataset x origin blocks (Holm)",
+    "passed": true,
+    "evidence": {
+      "frac_significant_by_comparison": {
+        "SoftSR < LegacyPersist": 0.778,
+        "SoftSR < NaiveKD": 0.778
+      },
+      "n_tests": 18
+    }
+  },
+  {
+    "claim": "H2",
+    "statement": "SoftSR non-inferior to HardRejectSR on mean relative regret (5% margin)",
+    "passed": true,
+    "evidence": {
+      "per_student": {
+        "DLinear": {
+          "estimate": 0.0005,
+          "upper95": 0.0012
+        },
+        "PatchTST": {
+          "estimate": 0.0066,
+          "upper95": 0.0111
+        },
+        "N-HiTS": {
+          "estimate": -0.0023,
+          "upper95": 0.0001
+        }
+      }
+    }
+  },
+  {
+    "claim": "H3",
+    "statement": "On gate-accepted cells, SoftSR rel. regret vs best(NS, NaiveKD) within 5% margin",
+    "passed": true,
+    "evidence": {
+      "per_student": {
+        "DLinear": {
+          "estimate": 0.0002,
+          "upper95": 0.0006
+        },
+        "PatchTST": {
+          "estimate": 0.0099,
+          "upper95": 0.0193
+        },
+        "N-HiTS": {
+          "estimate": 0.0038,
+          "upper95": 0.009
+        }
+      }
+    }
+  },
+  {
+    "claim": "H4",
+    "statement": "H1 protection direction holds for every primary student architecture",
+    "passed": true,
+    "evidence": {
+      "frac_significant_per_student": {
+        "DLinear": 1.0,
+        "N-HiTS": 0.667,
+        "PatchTST": 0.667
+      }
+    }
+  },
+  {
+    "claim": "S1",
+    "statement": "Upper 95% CI of the SoftSR negative-transfer rate reported per student (threshold to be fixed against the engineering tolerance in the manuscript)",
+    "passed": true,
+    "evidence": {
+      "nt_rate_upper95_per_student": {
+        "DLinear": 0.256,
+        "PatchTST": 0.289,
+        "N-HiTS": 0.122
+      }
+    }
+  }
+]

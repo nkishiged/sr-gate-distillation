@@ -1,0 +1,123 @@
+{
+  "max_points": 20000,
+  "seeds": [
+    42,
+    123,
+    2024,
+    7,
+    99
+  ],
+  "mh_seeds": [
+    42,
+    123,
+    2024
+  ],
+  "abl_seeds": [
+    42,
+    123,
+    2024
+  ],
+  "epochs": 60,
+  "patience": 10,
+  "batch_size": 256,
+  "hidden_dim": 128,
+  "n_cells": 128,
+  "vqc_epochs": 30,
+  "qkrr_landmarks": 512,
+  "multi_horizon": true,
+  "bootstrap": 5000,
+  "window": 96,
+  "loss_weights": {
+    "NS": {
+      "pred": 1.0,
+      "distill": 0.0,
+      "obs": 0.0,
+      "spec": 0.0,
+      "acf": 0.0,
+      "smooth": 0.02,
+      "stab": 0.01
+    },
+    "Emulator": {
+      "pred": 0.55,
+      "distill": 0.3,
+      "obs": 0.3,
+      "spec": 0.05,
+      "acf": 0.05,
+      "smooth": 0.02,
+      "stab": 0.01
+    },
+    "Adaptive": {
+      "pred": 0.55,
+      "distill": 0.3,
+      "obs": 0.3,
+      "spec": 0.05,
+      "acf": 0.05,
+      "smooth": 0.02,
+      "stab": 0.01
+    }
+  },
+  "main_horizon": 24,
+  "multi_horizons": [
+    24,
+    48,
+    96
+  ],
+  "teachers": [
+    "QELM",
+    "VQC",
+    "QRC",
+    "QKRR"
+  ],
+  "models": [
+    "Persistence",
+    "MovingAverage",
+    "MLP",
+    "LSTM",
+    "Transformer",
+    "N-HiTS",
+    "N-BEATS",
+    "DLinear",
+    "NLinear",
+    "PatchTST",
+    "TiDE",
+    "TimesNet",
+    "iTransformer",
+    "QELM",
+    "VQC",
+    "QRC",
+    "QKRR",
+    "CeNN_NS",
+    "CeNN_Emu[QELM]",
+    "CeNN_Emu[VQC]",
+    "CeNN_Emu[QRC]",
+    "CeNN_Emu[QKRR]",
+    "CeNN_Ada[QELM]",
+    "CeNN_Ada[VQC]",
+    "CeNN_Ada[QRC]",
+    "CeNN_Ada[QKRR]"
+  ],
+  "lr": 0.0008,
+  "lr_grid": [
+    0.0008,
+    0.0003
+  ],
+  "lr_search_models": [
+    "Transformer",
+    "PatchTST",
+    "TiDE",
+    "TimesNet",
+    "iTransformer"
+  ],
+  "teacher_clip_sigma": 4.0,
+  "teacher_explode_sigma": 4.0,
+  "reliable_r": 0.9,
+  "unreliable_r": 0.5,
+  "prereg": {
+    "F1_negative_transfer": "CeNN_Ada[t] vs CeNN_Emu[t], per teacher t and dataset (one-sided: Ada <= Emu)",
+    "F2_cost_of_distillation": "CeNN_Ada[t] vs CeNN_NS, per teacher t and dataset (two-sided)",
+    "F3_competitiveness": "CeNN_Ada[best t] vs {DLinear, Persistence} per dataset (two-sided, descriptive)",
+    "omnibus": "Friedman + Nemenyi over dataset x horizon blocks (N=18) on OMNI_MODELS (k=10)",
+    "divergence_rule": "a run is 'diverged' if its test MASE > 3 x Persistence MASE on the same split"
+  },
+  "run_mode": "full"
+}
